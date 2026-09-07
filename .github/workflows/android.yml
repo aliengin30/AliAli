@@ -50,13 +50,22 @@ jobs:
           npm -v
           which npm
 
+      - name: Check system commands
+        run: |
+          echo "PATH=$PATH"
+          which sh
+          which uname
+          which xargs
+          uname -a
+          xargs --version
+
       - name: Build Debug APK
         working-directory: android
         env:
           NODE_ENV: production
           NODE_BINARY: /opt/hostedtoolcache/node/22.23.2/x64/bin/node
-          PATH: /opt/hostedtoolcache/node/22.23.2/x64/bin:$PATH
         run: |
+          chmod +x gradlew
           ./gradlew assembleDebug \
             -PreactNativeArchitectures=arm64-v8a \
             --no-daemon \
