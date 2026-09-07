@@ -6,6 +6,7 @@ import { AnimatedSplashOverlay } from '@/components/animated-icon';
 import AppTabs from '@/components/app-tabs';
 
 SplashScreen.preventAutoHideAsync();
+SplashScreen.hideAsync();
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
