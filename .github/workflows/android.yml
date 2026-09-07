@@ -46,6 +46,7 @@ jobs:
       - name: Check Node.js
         run: node -v && which node
       - name: Build Debug APK
+        env:
         working-directory: android
         run: ./gradlew assembleDebug -PreactNativeArchitectures=arm64-v8a --no-daemon --stacktrace --info
 
