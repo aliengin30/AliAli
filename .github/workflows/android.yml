@@ -33,7 +33,7 @@ jobs:
         run: npx expo prebuild --platform android
 
       - name: Set Android NDK version
-        run: echo "ndkVersion=27.1.12297006" >> android/gradle.properties
+        run: printf '\nndkVersion=27.1.12297006\n' >> android/gradle.properties
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
