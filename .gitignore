@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+
+# Android build output
+android/.gradle/
+android/build/
+android/app/build/
+*.apk
+*.aab
+
+# Local SDK configuration
+android/local.properties
+
+# Models
+models/
+*.gguf
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
